@@ -1,0 +1,14 @@
+<p>chatroom works!</p>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Your Name</label>
+    <input type="text" name="name" placeholder="John Doe" formControlName="userName" />
+    <input type="submit" value="Join Random Room" />
+  </div>
+  <div>
+    <label for="roomId">Room ID</label>
+    <input type="text" name="roomId" placeholder="Room ID" formControlName="roomId" />
+    <input type="submit" value="Join Room" />
+    <input type="submit" value="Create Room" />
+  </div>
+</form>
