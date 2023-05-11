@@ -22,7 +22,7 @@ export class ChatroomComponent implements OnInit {
     // sends post request to server, which will create a new room or use
     // an existing room id
     console.log(this.userForm.value);
-    this.http.post(this.baseUrl + 'chatroom', this.userForm.value).subscribe(result => {
+    this.http.post(this.baseUrl + 'rooms', this.userForm.value).subscribe(result => {
       console.log(result);
     }, error => console.error(error));
 

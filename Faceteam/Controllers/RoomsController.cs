@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,13 +26,20 @@ namespace Faceteam.Controllers
 
         // POST api/<RoomsController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(JObject user)
         {
             // should contain user id, and room id
             // if user id is empty, 404
             // if room id is empty, create new room, return it.
             Console.WriteLine("POST Reqeust: ");
-            Console.WriteLine(value);
+            Console.WriteLine(user);
+            /*
+             POST Reqeust:
+            {
+                "userName": "123465",
+                "roomId": ""
+            }
+             */
         }
 
         // PUT api/<RoomsController>/5
